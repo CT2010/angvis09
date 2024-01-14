@@ -1,0 +1,104 @@
+.add-button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+/* Định dạng cho tooltip */
+.leaflet-tooltip {
+  background-color: rgb(90, 234, 19);
+  border: 1px solid #3704ad;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Màu nền cho tooltip */
+.leaflet-tooltip.leaflet-tooltip-top:before,
+.leaflet-tooltip.leaflet-tooltip-bottom:before {
+  border-top-color: rgb(214, 15, 15);
+}
+
+.leaflet-tooltip.leaflet-tooltip-bottom:before,
+.leaflet-tooltip.leaflet-tooltip-top:before {
+  border-bottom-color: rgb(22, 70, 5);
+}
+.leaflet-tooltip {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  /* Thêm các thuộc tính CSS khác mà bạn muốn tùy chỉnh */
+}
+/* Tùy chỉnh CSS cho popup */
+.leaflet-popup-content-wrapper {
+  background-color: #0748e0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.leaflet-popup-content {
+  /* CSS cho nội dung trong popup */
+  font-size: 14px;
+  color: #333333;
+  /* background-color: #0748e0; */
+  /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); */
+  /* display: inline-block; */
+}
+/* CSS trong file .css hoặc trong component styles của bạn */
+
+.data-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+.data-item {
+  margin-bottom: 15px;
+}
+
+.sensor-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sensor-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.data-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+.data-container h2 {
+  margin-bottom: 10px;
+}
+
+.data-item {
+  margin-bottom: 15px;
+}
+
+.data-item p {
+  margin: 5px 0;
+}
+
+canvas {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+

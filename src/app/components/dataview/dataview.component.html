@@ -1,0 +1,44 @@
+
+   <div *ngIf="sensorData$ | async as data">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Point Name</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.name }}</td>
+          <td>{{ item.latitude }}</td>
+          <td>{{ item.longitude }}</td>
+        </tr>
+      </tbody>
+    </table>
+   
+    <!-- Table 2: Details of Each Point -->
+    <div *ngFor="let item of data">
+      <h2>Point Details - {{ item.name }}</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>uvIndex</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sensor of item.data">
+            <td>{{ sensor.timestamp }}</td>
+            <td>{{ sensor.sensors.temperature }}</td>
+            <td>{{ sensor.sensors.humidity }}</td>
+            <td>{{ sensor.sensors.uvIndex }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+    </div>
+  </div>
+  

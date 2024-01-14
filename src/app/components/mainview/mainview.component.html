@@ -1,0 +1,33 @@
+<!--  mainview.component.HTML -->
+
+<div id="map" style="height: 450px; width:auto"></div>
+ 
+<!-- Hiển thị dữ liệu từ API khi click vào marker -->
+<!-- <div *ngIf="showMarkerData && dataVis" class="data-container">
+  <h2>Data from API</h2>
+  <div class="data-item">
+    <p><strong>Name:</strong> {{ dataVis.name }}</p>
+    <p><strong>Latitude:</strong> {{ dataVis.latitude }}</p>
+    <p><strong>Longitude:</strong> {{ dataVis.longitude }}</p>
+  </div>
+  <ul class="sensor-list">
+    <li *ngFor="let sensor of dataVis.data" class="sensor-item">
+      <p><strong>Timestamp:</strong> {{ sensor.timestamp }}</p>
+      <p><strong>Temperature:</strong> {{ sensor.sensors.temperature }}</p>
+      <p><strong>Humidity:</strong> {{ sensor.sensors.humidity }}</p>
+      <p><strong>UV Index:</strong> {{ sensor.sensors.uvIndex }}</p>
+    </li>
+  </ul>
+</div> -->
+
+<!-- biểu đồ charjs -->
+<div *ngIf="showMarkerData && dataSensor" class="data-container">
+  <h2>Biểu đồ Data from API</h2>
+  <div class="data-item">
+    <p><strong>Name:</strong> {{ dataVis.name }}</p>
+    <p><strong>Latitude:</strong> {{ dataVis.latitude }}</p>
+    <p><strong>Longitude:</strong> {{ dataVis.longitude }}</p>
+  </div>
+  <canvas #temperatureChartCanvas width="400" height="200"></canvas>
+  <canvas #humidityChartCanvas width="400" height="200"></canvas>
+</div>

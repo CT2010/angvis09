@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenavMenu.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenavMenu mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+    (closed)="events.push('close!')">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/about']">
+        <mat-icon mat-list-icon>person</mat-icon> About
+      </a>
+      <!-- Additional menu items here -->
+    </mat-nav-list>
+    <a mat-list-item (click)="sidenavMenu.toggle()">
+      <mat-icon>close</mat-icon> Close
+    </a>
+  </mat-sidenav>
+  <mat-sidenav-content class="mainav-content">
+    <p>workkkk</p>
+    <router-outlet>
+      <!-- <app-mainview></app-mainview> -->
+    </router-outlet>
+    <!-- <div id="mapid" style="width: 600px; height: 400px;"></div> -->
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+//file module.ts
+
+// export class AppComponent {
+    //   title = 'vis02';
+    //   events: string[] = [];
+    //   opened: boolean | undefined;
+    
+    
+    
+    
+    //   list: any[] = [
+    //     { label: 'Home', route: '/home', isActive: true },
+    //     { label: 'About', route: '/about', isActive: false },
+    //     // ... Các mục danh sách khác
+    //   ];
+    //   @ViewChild('sidenav') sidenav!: MatSidenav;
+    //   public isOpend = false;
+    
+    //   public openLeftSide(){
+    //     this.isOpend = !this.isOpend;
+    //     this.sidenav.toggle();
+    //   }
+    
+    //   public closeLeftSide(){
+    //     this.isOpend = false;
+    //   }
+    // }
